@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*{
+    font-family: 'Poppins';
+}
+
+body{
+    background: #f2eaff
+}
+
+.wrapper{
+    width: 200px;
+    margin-bottom: 150vh;
+    text-align: center;
+
+    .transition-button{
+        background: linear-gradient(90deg, var(--c1, #f6d365), var(--c2, #fda085) 51%, var(--c1, #f6d365)) var(--x, 0)/ 200%;
+        color: #fff;
+        font-weight: 700;
+        padding: 12px 0px 12px 0px;
+        border: none;
+        border-radius: 15px;
+        font-family: 'Nunito';
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        -webkit-transition: 0.6s all;
+        -webkit-transition-timing-function: cubic-bezier(0.6, 0.34, 0.18, 0.85);
+        width: 10px;
+        overflow: hidden;
+        transform-origin: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        --c1: #170042;
+        --c2: #5829b1;  
+
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-transition: 1.2s all;
+            -webkit-transition-timing-function: cubic-bezier(0.6, 0.34, 0.18, 0.85);
+            opacity: 0;
+            line-height: 1;
+            transform: translateX(90px);        
+        }
+
+        img{
+            transform: translateX(-40px);
+            -webkit-transition: 1.2s all;
+            -webkit-transition-timing-function: cubic-bezier(0.6, 0.34, 0.18, 0.85);
+            opacity: 0;
+            vertical-align: middle;
+            margin-left: 15px;
+            max-width: 25px;
+        }
+
+    
+        &.do-transition{
+            width: 100%;
+            padding: 12px 26px 12px 26px;
+            
+
+            span{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+            
+            img{
+                opacity: 1;
+                transform: translateX(5px);
+            }
+        }
+    
+        &:hover{
+            --x: 100%;
+        }
+    
+    }
+}
+
+.count{
+    font-weight: 700;
+    font-size: 20px;
+    -webkit-transition: 0.5s all ease-in-out;
+    
+}
